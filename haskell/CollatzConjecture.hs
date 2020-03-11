@@ -1,5 +1,7 @@
 module CollatzConjecture (collatz) where
 
+{-Computes the number of steps taken from the input to termination -}
+
 collatz :: Integer -> Maybe Integer
 collatz n
         | n <= 0    = Nothing
