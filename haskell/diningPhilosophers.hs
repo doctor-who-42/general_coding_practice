@@ -18,7 +18,7 @@ module Main where
         where 
             nbPhilosophers          = 5
             nthChopstick cs n       = cs !! (n `mod` nbPhilosophers)
-            createPhilosopher cs n  = dine n (nthChopstick cs n) (nthChopstick cs (n+1))
+            createPhilosopher cs n  = dine n (nthChopstick cs n) (nthChopstick cs $ n+1)
 
     type Chopstick = TMVar ()
 
