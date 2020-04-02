@@ -7,10 +7,10 @@ module MatrixOperations where
     scalarVector n = map (n*)
 
     addVector :: Num a => Vector a -> Vector a -> Vector a
-    addVector v0 v1 = zipWith (+) v0 v1
+    addVector = zipWith (+)
 
     addMatrix :: Num a => Matrix a -> Matrix a -> Matrix a
-    addMatrix m0 m1 = zipWith addVector m0 m1
+    addMatrix = zipWith addVector
 
     getCol :: Matrix a -> Int -> Vector a
     getCol m n = map (!!n) m
